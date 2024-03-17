@@ -5,6 +5,7 @@ import navigationItems from "../../../data/navigationItems";
 
 const NavigationLinkList = styled.ul`
   display: flex;
+  gap: 1.5rem;
 `;
 
 const NavigationLinkItem = styled.li``;

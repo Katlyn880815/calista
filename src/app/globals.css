@@ -79,6 +79,14 @@
   margin: 0;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
 html,
 body {
   max-width: 100vw;
@@ -92,4 +100,13 @@ a {
 
 li {
   list-style: none;
+}
+
+.container {
+  margin: 3rem 15%;
+}
+
+.root {
+  background-color: #ffecda;
+  border-radius: 1rem;
 }
