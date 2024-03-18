@@ -2,27 +2,38 @@
 
 import styled from "styled-components";
 import navigationItems from "../../../data/navigationItems";
+import { ReactElement } from "react";
+
+const Nav = styled.nav`
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+`;
 
 const NavigationLinkList = styled.ul`
   display: flex;
   gap: 1.5rem;
 `;
 
-const NavigationLinkItem = styled.li``;
+const StyledLink = styled.a`
+  transition: 0.3s color;
+  &:hover {
+    color: #b1a592;
+  }
+`;
 
-const NavigationLink = styled.a``;
-
-const Navigation = () => {
+const Navigation = ({ children }: { children?: ReactElement }) => {
   return (
-    <nav>
+    <Nav>
       <NavigationLinkList>
         {navigationItems.map((navItem) => (
-          <NavigationLinkItem key={navItem.id}>
-            <NavigationLink href={navItem.link}>{navItem.title}</NavigationLink>
-          </NavigationLinkItem>
+          <li key={navItem.id}>
+            <StyledLink href={navItem.link}>{navItem.title}</StyledLink>
+          </li>
         ))}
       </NavigationLinkList>
-    </nav>
+      {children}
+    </Nav>
   );
 };
 

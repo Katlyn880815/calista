@@ -51,12 +51,11 @@ export default function RootLayout({
           <div className="container">
             <div className="root">
               <Header>
-                <div>
-                  <Navigation />
+                <Navigation>
                   <CtaBtn>
                     <Link href="#reservation">立即預約</Link>
                   </CtaBtn>
-                </div>
+                </Navigation>
               </Header>
             </div>
             {children}

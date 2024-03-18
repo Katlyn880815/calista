@@ -3,6 +3,14 @@
 import { createGlobalStyle, css } from "styled-components";
 
 const styles = css`
+  :root {
+    --color-cta: #9d8d79;
+    --color-background: #feecda;
+    --color-tine: #b1a592;
+
+    --color-dark-grey: #383838;
+  }
+
   * {
     box-sizing: border-box;
     padding: 0;
@@ -16,6 +24,8 @@ const styles = css`
   body {
     font-size: 1.6rem;
     font-weight: 500;
+    letter-spacing: 0.09rem;
+    color: var(--color-dark-grey);
   }
 
   html,
@@ -31,6 +41,10 @@ const styles = css`
 
   li {
     list-style: none;
+  }
+
+  button {
+    border: none;
   }
 
   .container {
