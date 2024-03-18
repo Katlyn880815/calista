@@ -1,10 +1,15 @@
+import StyledComponentsRegistry from "@/lib/registry";
+
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Noto_Serif } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
 import Navigation from "@/components/common/Navigation";
 import Header from "@/components/common/Header";
+import CtaBtn from "@/components/common/CtaBtn";
+import GlobalStyles from "@/styles/GlobalStyles";
 
 const notoSerif = Noto_Serif({ subsets: ["latin"] });
 
@@ -41,14 +46,22 @@ export default function RootLayout({
   return (
     <html lang="zh-tw">
       <body className={myFont.className}>
-        <div className="container">
-          <div className="root">
-            <Header>
-              <Navigation />
-            </Header>
+        <StyledComponentsRegistry>
+          <GlobalStyles />
+          <div className="container">
+            <div className="root">
+              <Header>
+                <div>
+                  <Navigation />
+                  <CtaBtn>
+                    <Link href="#reservation">立即預約</Link>
+                  </CtaBtn>
+                </div>
+              </Header>
+            </div>
+            {children}
           </div>
-          {children}
-        </div>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
