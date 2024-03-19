@@ -1,10 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
-import Navigation from "@/components/common/Navigation";
+import Hero from "@/components/homepage/Hero";
 
 export default function Home() {
-  return (
-      <main className={styles.main}></main>
-  );
+  return <main className={styles.main}></main>;
 }

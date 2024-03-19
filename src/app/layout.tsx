@@ -4,12 +4,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Noto_Serif } from "next/font/google";
 import localFont from "next/font/local";
-import "./globals.css";
 
 import Navigation from "@/components/common/Navigation";
 import Header from "@/components/common/Header";
 import CtaBtn from "@/components/common/CtaBtn";
 import GlobalStyles from "@/styles/GlobalStyles";
+import Hero from "@/components/homepage/Hero";
 
 const notoSerif = Noto_Serif({ subsets: ["latin"] });
 
@@ -57,6 +57,7 @@ export default function RootLayout({
                   </CtaBtn>
                 </Navigation>
               </Header>
+              <Hero />
             </div>
             {children}
           </div>

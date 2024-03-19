@@ -45,10 +45,12 @@ const styles = css`
 
   button {
     border: none;
+    font-family: inherit;
+    letter-spacing: 0.09rem;
   }
 
   .container {
-    margin: 3rem 15%;
+    margin: 3rem 5em;
   }
 
   .root {
